@@ -1,0 +1,5 @@
+package boleto;
+
+class Boleto {
+
+}
