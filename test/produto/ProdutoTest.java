@@ -39,11 +39,31 @@ public class ProdutoTest {
 	}
 	
 	@Test
+	public void testSetPreco() {
+		livro.setPreco(300.00);
+		
+		assertTrue(300 == livro.getPreco());
+	}
+	
+	@Test
+	public void testGetnome() {
+		assertTrue(livro.getNome().contains("Introdução ao Teste de Software"));
+	}
+	
+	@Test
+	public void testSetnome() {
+		livro.setNome("Teste de Software Avançado");
+		assertTrue(livro.getNome().contains("Teste de Software Avançado"));
+	}
+	
+	
+	@Test
 	public void assertionComHamcrestMatcher() {
 		assertThat(livro.getPreco(), equalTo(100.00));
 		assertThat(livro.getNome(), notNullValue());
 		assertThat(livro.getNome(), containsString("Teste"));
 		assertThat(livro, instanceOf(Produto.class));
 	}
-
+	
+	
 }

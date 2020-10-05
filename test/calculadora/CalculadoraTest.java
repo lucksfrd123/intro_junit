@@ -49,5 +49,17 @@ public class CalculadoraTest {
 		assertThrows(ArithmeticException.class,
 				() -> calc.divisao(8, 0));
 	}
+	
+	@Test
+	public void testmultiplicaDoisNumeros() {
+		int soma = calc.multiplicacao(4, 5);		
+		Assertions.assertEquals(20, soma);		
+	}
+	
+	@Test
+	public void testehpositivo() {
+		Assertions.assertTrue(calc.ehPositivo(3));
+	}
 
+	
 }

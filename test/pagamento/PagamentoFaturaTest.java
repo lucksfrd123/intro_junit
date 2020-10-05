@@ -2,13 +2,15 @@ package pagamento;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 class PagamentoFaturaTest {
 
 	@Test
-	void test() {
-		fail("Not yet implemented");
+	public void verificarFatura() {
+		Assertions.assertArrayEquals(pago, pagamento(boleto));
+		
 	}
 
 }
