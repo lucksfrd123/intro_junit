@@ -13,8 +13,8 @@ class Pagamento {
 
 	public Pagamento(String data, List<Boleto> boletos, Fatura f) {
 		super();
-		this.data = data;
-		this.boletos = boletos;
+		this.setData(data);
+		this.setBoletos(boletos);
 		this.f = f;
 		
 	}
@@ -22,5 +22,25 @@ class Pagamento {
 	
 	public void pagarboletofatura() {
 		f.setpago(true);
+	}
+
+
+	public String getData() {
+		return data;
+	}
+
+
+	public void setData(String data) {
+		this.data = data;
+	}
+
+
+	public List<Boleto> getBoletos() {
+		return boletos;
+	}
+
+
+	public void setBoletos(List<Boleto> boletos) {
+		this.boletos = boletos;
 	}
 }
