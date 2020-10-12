@@ -20,4 +20,12 @@ public class Fatura {
 	public boolean returnapago() {
 		return pago;
 	}
+	
+	public void setpago(boolean pago) {
+		this.pago = pago;
+	}
+	
+	public double getFatValor() {
+		return fatvalor;
+	}
 }
