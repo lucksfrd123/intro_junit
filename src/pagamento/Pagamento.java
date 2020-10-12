@@ -19,9 +19,23 @@ class Pagamento {
 		
 	}
 	
+	public double somaboletofatura() {
+		double total = 0;
+		for(Boleto bt : boletos) {
+			total += bt.getvalor();
+		}
+		return total;
+	}
 	
 	public void pagarboletofatura() {
-		f.setpago(true);
+		double total = 0;
+		for(Boleto bt : boletos) {
+			total += bt.getvalor();
+		}
+		if (total >= f.getFatValor()){
+			f.setpago(true);
+		}
+		
 	}
 
 
